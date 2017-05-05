@@ -3,6 +3,7 @@ package com.jet.slaveofflower.base;
 import android.annotation.TargetApi;
 import android.content.Context;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.Window;
 import android.view.WindowManager;
@@ -10,7 +11,8 @@ import android.widget.Toast;
 
 import com.jet.slaveofflower.R;
 import com.jet.slaveofflower.utils.T;
-
+import com.jet.slaveofflower.utils.ThemeUtils;
+import com.readystatesoftware.systembartint.SystemBarTintManager;
 
 /**
  * Created by b508a on 2016/1/25.
@@ -96,7 +98,32 @@ public   abstract class BaseActivity extends  BaseFragmentActivity  implements I
         overridePendingTransition(R.anim.trans_pre_in, R.anim.trans_pre_out);
     }
 
+    protected void applyKitKatTranslucency() {
 
+        // KitKat translucent navigation/status bar.
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+            setTranslucentStatus(true);
+            SystemBarTintManager mTintManager = new SystemBarTintManager(this);
+            mTintManager.setStatusBarTintEnabled(true);
+
+            // mTintManager.setStatusBarTintResource(R.color.red_base);//通知栏所需颜色
+            mTintManager.setStatusBarTintColor(ThemeUtils.getThemeColor());
+        }
+
+    }
+    protected void applyKitKatTranslucency(int res) {
+
+        // KitKat translucent navigation/status bar.
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+            setTranslucentStatus(true);
+            SystemBarTintManager mTintManager = new SystemBarTintManager(this);
+            mTintManager.setStatusBarTintEnabled(true);
+
+            // mTintManager.setStatusBarTintResource(R.color.red_base);//通知栏所需颜色
+            mTintManager.setStatusBarTintColor(res);
+        }
+
+    }
     @TargetApi(19)
     protected void setTranslucentStatus(boolean on) {
         Window win = getWindow();

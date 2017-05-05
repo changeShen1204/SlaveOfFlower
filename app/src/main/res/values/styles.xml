@@ -1,6 +1,5 @@
 <resources>
 
-
     <style name="AppTheme" parent="MyThemeBlue"></style>
 
     <!-- 蓝色为主色调 -->
@@ -30,4 +29,6 @@
         <item name="colorControlNormal">@color/white</item>
         <item name="android:textSize">14sp</item>
     </style>
+
+
 </resources>

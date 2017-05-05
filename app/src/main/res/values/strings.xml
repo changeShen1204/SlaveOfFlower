@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">花奴</string>
+    <string name="new_note">新笔记</string>
+    <string name="crime_title_label">标题</string>
+    <string name="note_title_hint">输入养花笔记</string>
+    <string name="note_details_label">明细</string>
 </resources>
