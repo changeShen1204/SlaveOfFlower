@@ -8,4 +8,5 @@
     android:id="@+id/drawerlayout_home"
     tools:context=".MainActivity">
     <include layout="@layout/layout_content_main"/>
+
 </android.support.design.widget.CoordinatorLayout>
