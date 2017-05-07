@@ -3,8 +3,6 @@ package com.jet.slaveofflower.webview;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
-import android.support.v7.widget.Toolbar;
-import android.view.View;
 import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
@@ -12,16 +10,11 @@ import android.webkit.WebViewClient;
 
 import com.jet.slaveofflower.R;
 import com.jet.slaveofflower.base.BaseActivity;
-import com.jet.slaveofflower.utils.ThemeUtils;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class WebviewActivity extends BaseActivity {
-
-
-    @BindView(R.id.toolbar)
-    Toolbar toolbar;
     @BindView(R.id.webview)
     WebView webview;
     private String url;
@@ -31,12 +24,12 @@ public class WebviewActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_webview);
+        webview=(WebView)findViewById(R.id.webview);
         ButterKnife.bind(this);
         applyKitKatTranslucency();
         initData();
         initView();
     }
-
     private void initData(){
         Intent intent=getIntent();
         if(intent!=null){
@@ -45,14 +38,7 @@ public class WebviewActivity extends BaseActivity {
     }
 
     private void initView(){
-        toolbar.setBackgroundColor(ThemeUtils.getThemeColor());
-        toolbar.setNavigationIcon(R.drawable.back);
-        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                backThActivity();
-            }
-        });
+
         WebSettings settings = webview.getSettings();
         settings.setJavaScriptEnabled(true);// 支持JS
         //settings.setBuiltInZoomControls(true);// 显示放大缩小按钮
@@ -91,8 +77,6 @@ public class WebviewActivity extends BaseActivity {
 
             @Override
             public void onReceivedTitle(WebView view, String title) {
-
-                toolbar.setTitle(title);
                 super.onReceivedTitle(view, title);
             }
         });

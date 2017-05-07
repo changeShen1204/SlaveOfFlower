@@ -35,19 +35,8 @@ public class ThemeUtils {
         return pref.getInt("position",0);
     }
 
-    public static int getToolBarColor(){
 
-        //if(MyApplication.getInstance().isNightMode()){
-           // return context.getResources().getColor(R.color.green_dark);
-     //   }else {
-            return  getThemeColor();
-       // }
-    }
 
-    public static int getThemeColor(){
-        SharedPreferences pref = context.getSharedPreferences("ThemeColor",context.MODE_PRIVATE);
-        return pref.getInt("themeColor", defaultThemeColor);
-    }
 
     public static ColorStateList getNaviItemIconTinkList(){
         int position=getThemePosition();

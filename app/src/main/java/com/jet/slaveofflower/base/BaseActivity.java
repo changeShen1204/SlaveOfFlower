@@ -11,7 +11,6 @@ import android.widget.Toast;
 
 import com.jet.slaveofflower.R;
 import com.jet.slaveofflower.utils.T;
-import com.jet.slaveofflower.utils.ThemeUtils;
 import com.readystatesoftware.systembartint.SystemBarTintManager;
 
 /**
@@ -27,21 +26,12 @@ public   abstract class BaseActivity extends  BaseFragmentActivity  implements I
     }
 
 
-    /**
-     * 弹出toast 显示时长short
-     *
-     * @param pMsg
-     */
+
     protected void toast(String pMsg) {
         T.show(this, pMsg, Toast.LENGTH_SHORT);
     }
 
 
-    /**
-     * 根据传入的类(class)打开指定的activity
-     *
-     * @param pClass
-     */
     protected void startThActivity(Class<?> pClass) {
         Intent _Intent = new Intent();
         _Intent.setClass(this, pClass);
@@ -107,7 +97,6 @@ public   abstract class BaseActivity extends  BaseFragmentActivity  implements I
             mTintManager.setStatusBarTintEnabled(true);
 
             // mTintManager.setStatusBarTintResource(R.color.red_base);//通知栏所需颜色
-            mTintManager.setStatusBarTintColor(ThemeUtils.getThemeColor());
         }
 
     }
