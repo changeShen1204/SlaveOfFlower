@@ -38,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
         radioGroup=(RadioGroup)findViewById(R.id.radiogroup);
         viewpager=(ViewPager)findViewById(R.id.viewpager);
         ButterKnife.bind(this);
+
         initViewpagerAndFragment();
         initListener();
     }
@@ -60,26 +61,29 @@ public class MainActivity extends AppCompatActivity {
                         currentFragment = 3;
                         break;
                 }
-                viewpager.setAdapter(new FragmentPagerAdapter(getSupportFragmentManager()) {
-                    @Override
-                    public int getCount() {
-                        return listFragment.size();
-                    }
+                viewpager.setCurrentItem(currentFragment,false);
 
-                    @Override
-                    public Fragment getItem(int arg0) {
-                        return listFragment.get(arg0);
-                    }
+            }
+        });
+        viewpager.setAdapter(new FragmentPagerAdapter(getSupportFragmentManager()) {
+            @Override
+            public int getCount() {
+                return listFragment.size();
+            }
 
-                    @Override
-                    public void destroyItem(ViewGroup container, int position,
-                                            Object object) {
-                        super.destroyItem(container, position, object);
-                    }
-                });
+            @Override
+            public Fragment getItem(int arg0) {
+                return listFragment.get(arg0);
+            }
+
+            @Override
+            public void destroyItem(ViewGroup container, int position,
+                                    Object object) {
+                super.destroyItem(container, position, object);
             }
         });
     }
+
     public void initViewpagerAndFragment(){
         flowerFragment=FlowerFragment.newInstance();
         hospitalFragment=HospitalFragment.newInstance();
