@@ -1,7 +1,172 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:orientation="vertical"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent">
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                      android:orientation="vertical"
+                      android:layout_width="match_parent"
+                      android:layout_height="match_parent">
+            <TextView
+                android:padding="5dp"
+                android:text="@string/problem"
+                android:textSize="30sp"
+                android:textColor="@color/text_gray_28"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#f89c9e"/>
 
-</LinearLayout>
+            <android.support.v7.widget.CardView
+                android:padding="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/problem_1"
+                    android:padding="8dp"
+                    android:textColor="@color/text_gray_6"
+                    android:layout_width="wrap_content"
+                    android:textSize="13sp"
+                    android:background="#cfcfcf"
+                    android:text="@string/problem_1"
+                    android:layout_height="wrap_content"/>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:padding="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/problem_2"
+                    android:padding="8dp"
+                    android:textColor="@color/text_gray_6"
+                    android:layout_width="wrap_content"
+                    android:textSize="13sp"
+                    android:text="@string/problem_2"
+                    android:layout_height="wrap_content"/>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:padding="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/problem_3"
+                    android:padding="8dp"
+                    android:textColor="@color/text_gray_6"
+                    android:layout_width="wrap_content"
+                    android:textSize="13sp"
+                    android:text="@string/problem_3"
+                    android:layout_height="wrap_content"
+                    android:background="#cfcfcf"/>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:padding="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/problem_4"
+                    android:padding="8dp"
+                    android:textColor="@color/text_gray_6"
+                    android:layout_width="wrap_content"
+                    android:textSize="13sp"
+                    android:text="@string/problem_4"
+                    android:layout_height="wrap_content"/>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:padding="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/problem_5"
+                    android:padding="8dp"
+                    android:textColor="@color/text_gray_6"
+                    android:layout_width="wrap_content"
+                    android:textSize="13sp"
+                    android:text="@string/problem_5"
+                    android:layout_height="wrap_content"
+                    android:background="#cfcfcf"/>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:padding="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/problem_6"
+                    android:padding="8dp"
+                    android:textColor="@color/text_gray_6"
+                    android:layout_width="wrap_content"
+                    android:textSize="13sp"
+                    android:text="@string/problem_6"
+                    android:layout_height="wrap_content"/>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:padding="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/problem_7"
+                    android:padding="8dp"
+                    android:textColor="@color/text_gray_6"
+                    android:layout_width="wrap_content"
+                    android:textSize="13sp"
+                    android:text="@string/problem_7"
+                    android:layout_height="wrap_content"
+                    android:background="#cfcfcf"/>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:padding="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/problem_8"
+                    android:padding="8dp"
+                    android:textColor="@color/text_gray_6"
+                    android:layout_width="wrap_content"
+                    android:textSize="13sp"
+                    android:text="@string/problem_8"
+                    android:layout_height="wrap_content"/>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:padding="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/problem_9"
+                    android:padding="8dp"
+                    android:textColor="@color/text_gray_6"
+                    android:layout_width="wrap_content"
+                    android:textSize="13sp"
+                    android:text="@string/problem_9"
+                    android:layout_height="wrap_content"
+                    android:background="#cfcfcf"/>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:padding="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/problem_10"
+                    android:padding="8dp"
+                    android:textColor="@color/text_gray_6"
+                    android:layout_width="wrap_content"
+                    android:textSize="13sp"
+                    android:text="@string/problem_10"
+                    android:layout_height="wrap_content"/>
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</android.support.design.widget.CoordinatorLayout>
+
