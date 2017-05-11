@@ -10,7 +10,7 @@ import android.widget.RadioGroup;
 
 import com.jet.slaveofflower.Fragment.FlowerFragment;
 import com.jet.slaveofflower.Fragment.HospitalFragment;
-import com.jet.slaveofflower.Fragment.KnowledgeFragment;
+import com.jet.slaveofflower.Fragment.Sunflower_Fragment;
 import com.jet.slaveofflower.Fragment.MyNoteFragment;
 
 import java.util.ArrayList;
@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
     ViewPager viewpager;
     private FlowerFragment flowerFragment;
     private HospitalFragment hospitalFragment;
-    private KnowledgeFragment knowledgeFragment;
+    private Sunflower_Fragment sunflowerFragment;
     private MyNoteFragment mMyNoteFragment;
     private List<Fragment> listFragment;
     private int currentFragment;
@@ -87,12 +87,12 @@ public class MainActivity extends AppCompatActivity {
     public void initViewpagerAndFragment(){
         flowerFragment=FlowerFragment.newInstance();
         hospitalFragment=HospitalFragment.newInstance();
-        knowledgeFragment=KnowledgeFragment.newInstance();
+        sunflowerFragment = Sunflower_Fragment.newInstance();
         mMyNoteFragment=MyNoteFragment.newInstance();
         listFragment=new ArrayList<>();
         listFragment.add(flowerFragment);
         listFragment.add(hospitalFragment);
-        listFragment.add(knowledgeFragment);
+        listFragment.add(sunflowerFragment);
         listFragment.add(mMyNoteFragment);
         viewpager.setOnPageChangeListener(onPageChangeListener);
     }
