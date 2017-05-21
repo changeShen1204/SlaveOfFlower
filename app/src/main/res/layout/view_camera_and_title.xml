@@ -18,7 +18,7 @@
                     android:background="@android:color/darker_gray"
                     android:cropToPadding="true"/>
                 <ImageButton
-                    android:id="@+id/crime_camera"
+                    android:id="@+id/note_camera"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:src="@android:drawable/ic_menu_camera"/>
@@ -37,6 +37,7 @@
                     android:id="@+id/crime_title"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:textColor="@color/text_gray_28"
                     android:layout_marginRight="16dp"
                     android:hint="@string/note_title_hint"/>
             </LinearLayout>

@@ -10,8 +10,8 @@ import android.widget.RadioGroup;
 
 import com.jet.slaveofflower.Fragment.FlowerFragment;
 import com.jet.slaveofflower.Fragment.HospitalFragment;
+import com.jet.slaveofflower.Fragment.NoteListFragment;
 import com.jet.slaveofflower.Fragment.Sunflower_Fragment;
-import com.jet.slaveofflower.Fragment.MyNoteFragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
     private FlowerFragment flowerFragment;
     private HospitalFragment hospitalFragment;
     private Sunflower_Fragment sunflowerFragment;
-    private MyNoteFragment mMyNoteFragment;
+    private NoteListFragment mMyNoteFragment;
     private List<Fragment> listFragment;
     private int currentFragment;
 
@@ -88,7 +88,7 @@ public class MainActivity extends AppCompatActivity {
         flowerFragment=FlowerFragment.newInstance();
         hospitalFragment=HospitalFragment.newInstance();
         sunflowerFragment = Sunflower_Fragment.newInstance();
-        mMyNoteFragment=MyNoteFragment.newInstance();
+        mMyNoteFragment= NoteListFragment.newInstance();
         listFragment=new ArrayList<>();
         listFragment.add(flowerFragment);
         listFragment.add(hospitalFragment);

@@ -40,6 +40,7 @@ public class Sunflower_Fragment extends BaseFragment {
         mButton=(ImageButton)view.findViewById(R.id.water_Button);
         mSunflower=(ImageView)view.findViewById(R.id.sun_View);
         my_tree=(TextView)view.findViewById(R.id.my_tree);
+        my_tree.setText("当前养成:"+Integer.valueOf(tree));
         mButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
