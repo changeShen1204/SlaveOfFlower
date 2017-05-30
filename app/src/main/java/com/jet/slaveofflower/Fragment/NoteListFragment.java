@@ -70,13 +70,16 @@ public class NoteListFragment extends Fragment{
     public void updateUI(){
         NoteLab noteLab=NoteLab.get(getActivity());
         List<Note> notes=noteLab.getNotes();
-        if(mAdapter==null){
+        if (mNoteRecyclerView == null) return ;
+        if(mNoteRecyclerView.getAdapter()==null){
             mAdapter=new NoteAdapter(notes);
             mNoteRecyclerView.setAdapter(mAdapter);
+            Log.e("a", "a");
         }
         else{
             mAdapter.setNotes(notes);
             mAdapter.notifyDataSetChanged();
+            Log.e("a", "a");
         }
     }
     private class NoteHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
@@ -122,7 +125,8 @@ public class NoteListFragment extends Fragment{
             return mNotes.size();
         }
         public void setNotes(List<Note> notes){
-            mNotes=notes;
+            mNotes.clear();
+            mNotes.addAll(notes);
         }
     }
 

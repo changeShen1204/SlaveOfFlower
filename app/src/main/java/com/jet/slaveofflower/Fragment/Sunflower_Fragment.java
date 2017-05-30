@@ -2,6 +2,7 @@ package com.jet.slaveofflower.Fragment;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,9 +23,9 @@ public class Sunflower_Fragment extends BaseFragment {
     public ImageButton mButton;
     public ImageView mSunflower;
     public TextView my_tree;
-    public int day=0;
-    public int nowaday =0;
-    public int tree=0;
+    public int day;
+    public int nowaday;
+    public int tree;
     public int messgaeId=R.string.sunflower;
     @Override
     public boolean hasMultiFragment() {
@@ -34,9 +35,19 @@ public class Sunflower_Fragment extends BaseFragment {
     protected String setFragmentName() {
         return null;
     }
+
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        nowaday = 0;
+        day = 0;
+        tree = 0;
+    }
+
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_sun, container, false);
+        Log.i("SunFlower", nowaday + "");
         mButton=(ImageButton)view.findViewById(R.id.water_Button);
         mSunflower=(ImageView)view.findViewById(R.id.sun_View);
         my_tree=(TextView)view.findViewById(R.id.my_tree);

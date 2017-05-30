@@ -37,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         radioGroup=(RadioGroup)findViewById(R.id.radiogroup);
         viewpager=(ViewPager)findViewById(R.id.viewpager);
+        viewpager.setOffscreenPageLimit(2);
         ButterKnife.bind(this);
 
         initViewpagerAndFragment();
@@ -61,8 +62,8 @@ public class MainActivity extends AppCompatActivity {
                         currentFragment = 3;
                         break;
                 }
-                viewpager.setCurrentItem(currentFragment,false);
 
+                viewpager.setCurrentItem(currentFragment,false);
             }
         });
         viewpager.setAdapter(new FragmentPagerAdapter(getSupportFragmentManager()) {
